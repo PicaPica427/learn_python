@@ -145,6 +145,43 @@ print(new2list + oldlist) # plus list and list
 
 
 
+# Tuple
+
+# 需要修改元素时 先转换成list
+
+thistuple = ("apple","banana","cherry","cherry",True)
+print(thistuple)
+print(len(thistuple))
+
+thistuple = tuple(("apple", "banana", "cherry"))
+print(thistuple)
+print(thistuple[1])
+
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x)
+
+
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow,*red) = fruits # or not include ()
+
+print(green)
+print(yellow)
+print(red)
+
+
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+
+print(mytuple)
+
 
 
 
