@@ -182,6 +182,66 @@ mytuple = fruits * 2
 
 print(mytuple)
 
+#-----------
+print("Set")
+thisset = {"apple", "banana", "cherry", "apple"} # set {}    list []    tuple () 
+thislist = {1,2,3}
+print(thisset)
+print(len(thisset)) # second apple will be ignore
+
+thisset = ("apple", "banana", "cherry", True, 1, 2) # True and 1
+print(set(thisset + thisset)) #此处不是set + set
+a = set(thisset)
+a.add("1")
+a.update([1,5,6,7,8,9,10])
+
+try :
+	a.remove("1")
+	a.remove("22")
+except:
+	print("not found")
+
+print(a)
+print()
+
+# ---------------------------
+setA = {1,2,3,4}
+setB = {"a","b","c",4}
+
+setC = setA.union(setB)
+print(setC)
+
+setC = setA.intersection(setB)
+print(setC)
+
+setC = setA.symmetric_difference(setB)
+print(setC)
+
+print(setA & setB)
+print(setA | setB)
+print(setA - setB)
+print(setA ^ setB)
+print(setA ^ setB)
+
+
+# ---------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
