@@ -224,7 +224,88 @@ print(setA ^ setB)
 print(setA ^ setB)
 
 
+list1 = ['a','b']
+list2 = ['c','d','e']
+
+
+import itertools
+#笛卡尔积
+for i in itertools.product(list1,list2):
+	print(i)
+
+
+
 # ---------------------------
+
+#Dictionary
+Dict = {
+	"age"  : 10 ,
+	"name" : "x",
+	"score": "1",
+	"func" : lambda x: x+1,
+	"l" : [1,2,3]
+}
+
+x = Dict.get("func")
+print(x)
+x = Dict["func"](1)
+print("call:",x)
+
+def print_func():
+	print("Dict:")
+	for i in Dict.keys(): # 遍历 keys方法   Dict.values()获得值列表
+	#	print("  {:>5} : {}".format(i,Dict[i]))
+	#	print("  %5s : %s" % (i,Dict[i]))
+		print(f"  {i:>5} : {Dict[i]}")
+
+def print_func2():
+	x = Dict.items()
+#Test
+#-----
+#	'dict_items' object does not support item assignment
+#	x["age"] = 50 
+#-----
+	print("print2:",x)
+	
+print_func2()
+
+Dict["age"] = 20
+print_func()
+
+x = Dict.values()
+Dict["age"] = 30
+print_func()
+print(x)        # 会跟着字典一起改变
+
+#查找
+if "age" in Dict:
+	print("exist")
+if "fu" in Dict:
+	print("exist")
+else:
+	print("not found")
+
+#删除
+del Dict["age"]
+# del Dict["11111111"] # cause exception
+Dict.pop("l")
+
+print_func()
+
+
+# 使用copy 或 dict()拷贝字典!
+
+
+# 嵌套字典
+dict1 = {"1":1,"2":2}
+dict2 = {"2":2}
+dict3 = {"a":dict1,"b":dict2}
+
+print(dict3["a"]["1"])
+
+
+	
+
 
 
 
