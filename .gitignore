@@ -1,0 +1,4 @@
+*.jpg
+*.txt
+/reptile/__pycache__/
+/reptile/logo/
